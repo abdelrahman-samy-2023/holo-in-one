@@ -2,30 +2,66 @@
 <html lang="ar" dir="rtl">
 
 <head>
+    <!-- 
+    ================================================== 
+    Document Meta Tags
+    ================================================== 
+    -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>منتجع هول إن ون</title>
 
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="منتجع هول إن ون - تجربة جولف فاخرة مع ثلاثة ملاعب عالمية وخدمات متكاملة">
+    <meta name="keywords" content="جولف, منتجع, هول إن ون, ملاعب جولف, تدريب جولف, إقامة فاخرة">
+    <meta name="author" content="Hole in One Resort">
+    <meta name="robots" content="index, follow">
+
+    <title>منتجع هول إن ون | تجربة جولف استثنائية</title>
+
+    <!-- 
+    ================================================== 
+    Stylesheets
+    ================================================== 
+    -->
     <!-- Favicon -->
-    <link rel="icon" href="./assets/images/favicon.png" type="image/x-icon">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><defs><linearGradient id='a' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' style='stop-color:%23B9FF66'/><stop offset='100%' style='stop-color:%234CAF50'/></linearGradient></defs><circle cx='256' cy='256' r='256' fill='%23191a23'/><g transform='translate(128 128)'><circle cx='128' cy='128' r='120' fill='white'/><path fill='url(%23a)' d='M128 8c66.274 0 120 53.726 120 120s-53.726 120-120 120S8 194.274 8 128 61.726 8 128 8zm0 20c-55.228 0-100 44.772-100 100s44.772 100 100 100 100-44.772 100-100-44.772-100-100-100zm30 50c0 16.569-13.431 30-30 30-16.569 0-30-13.431-30-30 0-16.569 13.431-30 30-30 16.569 0 30 13.431 30 30z'/><path fill='%23191a23' d='M158 78c0 16.569-13.431 30-30 30-16.569 0-30-13.431-30-30 0-16.569 13.431-30 30-30 16.569 0 30 13.431 30 30z' opacity='.15'/></g></svg>"
+        type="image/svg+xml">
 
-    <!-- Google Fonts (Cairo) -->
+    <!-- For iOS devices -->
+    <link rel="apple-touch-icon" sizes="180x180"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'><defs><linearGradient id='a' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' style='stop-color:%23B9FF66'/><stop offset='100%' style='stop-color:%234CAF50'/></linearGradient></defs><circle cx='90' cy='90' r='90' fill='%23191a23'/><g transform='translate(45 45)'><circle cx='45' cy='45' r='42' fill='white'/><path fill='url(%23a)' d='M45 3c23.196 0 42 18.804 42 42S68.196 87 45 87 3 68.196 3 45 21.804 3 45 3zm0 7c-19.33 0-35 15.67-35 35s15.67 35 35 35 35-15.67 35-35-15.67-35-35-35zm10.5 17.5c0 5.799-4.701 10.5-10.5 10.5-5.799 0-10.5-4.701-10.5-10.5 0-5.799 4.701-10.5 10.5-10.5 5.799 0 10.5 4.701 10.5 10.5z'/><path fill='%23191a23' d='M55.5 27.5c0 5.799-4.701 10.5-10.5 10.5-5.799 0-10.5-4.701-10.5-10.5 0-5.799 4.701-10.5 10.5-10.5 5.799 0 10.5 4.701 10.5 10.5z' opacity='.15'/></g></svg>">
+
+    <!-- For Android Chrome -->
+    <meta name="theme-color" content="#191a23">
+
+    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
 
-    <!-- Font Awesome for Icons -->
+    <!-- Third Party CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
-<body class="font-arabic bg-gray-100 text-gray-800">
+<body class="font-arabic bg-gray-100 text-gray-800" data-scroll-container>
+    <!-- Custom Cursor -->
+    <div class="custom-cursor">
+        <div class="cursor-glow"></div>
+        <div class="cursor-dot"></div>
+    </div>
 
-    <!-- Main Landing Page Container -->
+    <!-- 
+    ================================================== 
+    Main Content
+    ================================================== 
+    -->
     <div class="landing-page">
-
-        <!-- Navigation Bar -->
+        <!-- Navigation -->
         <nav class="navbar">
+            <!-- Logo -->
             <a href="#" class="logo">
                 <div class="logo-container">
                     <i class="fas fa-golf-ball"></i>
@@ -33,13 +69,13 @@
                 </div>
             </a>
 
-            <!-- Hamburger Menu Button -->
+            <!-- Mobile Menu Toggle -->
             <div class="menu-toggle" aria-label="Toggle navigation">
                 <i class="fas fa-bars menu-icon"></i>
                 <i class="fas fa-times close-icon"></i>
             </div>
 
-            <!-- Navbar Links -->
+            <!-- Navigation Links -->
             <ul class="nav-links">
                 <li><a href="#about"><i class="fas fa-users"></i> من نحن</a></li>
                 <li><a href="#services"><i class="fas fa-concierge-bell"></i> الخدمات</a></li>
@@ -48,11 +84,13 @@
             </ul>
         </nav>
 
-        <!-- Header Section -->
+        <!-- Hero Section -->
         <header class="header">
             <div class="header-content">
-                <h1>منتجع هول إن ون</h1>
-                <p class="subtitle">استمتع بتجربة فريدة في منتجعنا الفاخر حيث الراحة والرفاهية تلتقي مع الطبيعة الخلابة
+                <h1 id="typed-text"></h1>
+                <p class="subtitle">
+                    اكتشف عالماً من الفخامة في منتجعنا المميز للجولف، حيث نقدم لك ثلاثة ملاعب عالمية بما فيها ملعب "سي
+                    فيو" الشهير، مع باقات متنوعة وخدمات متكاملة من الإقامة الفاخرة والتدريب المتخصص لتجربة لا تُنسى
                 </p>
                 <a href="#booking" class="btn btn-primary">
                     <i class="fas fa-calendar-alt"></i>
@@ -60,25 +98,109 @@
                 </a>
             </div>
             <div class="header-image">
-                <img src="./assets/images/hero-image.png" alt="منتجع هول إن ون">
+                <img src="./assets/images/hero-image.png" alt="منتجع هول إن ون للجولف" loading="lazy">
             </div>
         </header>
 
-        <!-- Logotypes Section -->
-        <section class="logotypes"></section>
-
+        <!-- Partners Section -->
+        <section class="logotypes">
+            <div class="container">
+                <div class="swiper logos-swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide logo-item">
+                            <img src="./assets/images/company-logo-1.png" alt="Partner Logo 1" loading="lazy">
+                        </div>
+                        <div class="swiper-slide logo-item">
+                            <img src="./assets/images/company-logo-2.png" alt="Partner Logo 2" loading="lazy">
+                        </div>
+                        <div class="swiper-slide logo-item">
+                            <img src="./assets/images/company-logo-3.png" alt="Partner Logo 3" loading="lazy">
+                        </div>
+                        <div class="swiper-slide logo-item">
+                            <img src="./assets/images/company-logo-4.png" alt="Partner Logo 4" loading="lazy">
+                        </div>
+                        <div class="swiper-slide logo-item">
+                            <img src="./assets/images/company-logo-5.png" alt="Partner Logo 5" loading="lazy">
+                        </div>
+                        <div class="swiper-slide logo-item">
+                            <img src="./assets/images/company-logo-6.png" alt="Partner Logo 6" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
-    <!-- End of Landing Page -->
 
-    <!-- Footer Section -->
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <!-- Decorative Elements -->
+        <div class="shapes-container">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="shape shape-4"></div>
+        </div>
+
+        <div class="container">
+            <div class="about-content">
+                <div class="section-header">
+                    <h2>من نحن</h2>
+                </div>
+                <p class="about-description">
+                    نحن في منتجع هول إن ون نفخر بتقديم تجربة جولف استثنائية منذ عام 1995. يمتد تاريخنا العريق لأكثر
+                    من 25 عاماً من التميز في عالم الجولف.
+                </p>
+
+                <!-- Feature Cards -->
+                <div class="features-grid">
+                    <div class="feature-card" data-tilt>
+                        <div class="feature-icon">
+                            <i class="fas fa-golf-ball"></i>
+                        </div>
+                        <h4>3 ملاعب عالمية</h4>
+                    </div>
+
+                    <div class="feature-card" data-tilt>
+                        <div class="feature-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <h4>25+ عام خبرة</h4>
+                    </div>
+
+                    <div class="feature-card" data-tilt>
+                        <div class="feature-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h4>50+ مدرب محترف</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer class="footer"></footer>
 
-    <!-- GSAP Library -->
+    <!-- 
+    ================================================== 
+    Scripts
+    ================================================== 
+    -->
+    <!-- Core Libraries -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <!-- Anime.js Library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
-    <script src="./assets/js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
+    <!-- Smooth Scroll Library -->
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+
+    <!-- Additional Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="./assets/js/main.js"></script>
 </body>
 
 </html>
