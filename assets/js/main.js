@@ -448,6 +448,29 @@ const GoToTopManager = {
     }
 };
 
+// Add lazy loading for images
+const ImageManager = {
+    init() {
+        // Get all images that should be lazy loaded
+        const images = document.querySelectorAll('img[data-src]');
+
+        // Set up intersection observer
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    img.src = img.dataset.src;
+                    img.removeAttribute('data-src');
+                    observer.unobserve(img);
+                }
+            });
+        });
+
+        // Observe each image
+        images.forEach(img => imageObserver.observe(img));
+    }
+};
+
 /**
  * Initialize everything when DOM is loaded
  */
@@ -457,6 +480,7 @@ document.addEventListener('DOMContentLoaded', () => {
     AnimationManager.init();
     CursorManager.init();
     GoToTopManager.init();
+    ImageManager.init();
 
     // Initialize AOS if available
     if (typeof AOS !== 'undefined') {
@@ -464,7 +488,8 @@ document.addEventListener('DOMContentLoaded', () => {
             duration: 800,
             easing: 'ease-out',
             once: true,
-            offset: 50
+            offset: 50,
+            disable: 'mobile' // Disable animations on mobile
         });
     }
 });

@@ -3208,3 +3208,28 @@ p {
     left: 20px;
   }
 }
+
+/* Add will-change for smoother animations */
+.animated-element {
+  will-change: transform;
+}
+
+/* Optimize mobile animations */
+@media (max-width: 768px) {
+  .animated-element {
+    /* Reduce animation complexity on mobile */
+    transition: transform 0.3s ease-out;
+    will-change: auto;
+    /* Remove will-change on mobile */
+  }
+
+  /* Disable hover effects on mobile */
+  .hover-effect {
+    transform: none !important;
+  }
+}
+
+/* Use passive event listeners for touch events */
+.scroll-container {
+  touch-action: pan-y;
+}
