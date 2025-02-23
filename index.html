@@ -15,6 +15,7 @@
     <meta name="keywords" content="جولف, منتجع, هول إن ون, ملاعب جولف, تدريب جولف, إقامة فاخرة">
     <meta name="author" content="Hole in One Resort">
     <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#191a23">
 
     <title>منتجع هول إن ون | تجربة جولف استثنائية</title>
 
@@ -42,11 +43,17 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
+    <!-- AOS Library -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="./assets/css/style.css">
+
+    <!-- Add in head section -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.0/color-thief.umd.js"></script>
 </head>
 
-<body class="font-arabic bg-gray-100 text-gray-800" data-scroll-container>
+<body class="font-arabic bg-gray-100 text-gray-800" data-scroll-container data-theme="dark">
     <!-- Custom Cursor -->
     <div class="custom-cursor">
         <div class="cursor-glow"></div>
@@ -65,7 +72,7 @@
             <a href="#" class="logo">
                 <div class="logo-container">
                     <i class="fas fa-golf-ball"></i>
-                    <span class="logo-text">هول إن ون</span>
+                    <span class="logo-text" data-translate="logo-text">هول إن ون</span>
                 </div>
             </a>
 
@@ -77,22 +84,22 @@
 
             <!-- Navigation Links -->
             <ul class="nav-links">
-                <li><a href="#about"><i class="fas fa-users"></i> من نحن</a></li>
-                <li><a href="#services"><i class="fas fa-concierge-bell"></i> الخدمات</a></li>
-                <li><a href="#plans"><i class="fas fa-box"></i> الحزم المتخصصة</a></li>
-                <li><a href="#contact"><i class="fas fa-envelope"></i> تواصل معنا</a></li>
+                <li><a href="#about" data-translate="nav-about"><span>من نحن</span></a></li>
+                <li><a href="#services" data-translate="nav-services"><span>خدماتنا</span></a></li>
+                <li><a href="#packages" data-translate="nav-packages"><span>الحزم المتخصصة</span></a></li>
+                <li><a href="#contact" data-translate="nav-contact"><span>تواصل معنا</span></a></li>
             </ul>
         </nav>
 
         <!-- Hero Section -->
         <header class="header">
             <div class="header-content">
-                <h1 id="typed-text"></h1>
-                <p class="subtitle">
+                <h1 id="typed-text" data-translate="hero-title"></h1>
+                <p class="subtitle" data-translate="hero-subtitle">
                     اكتشف عالماً من الفخامة في منتجعنا المميز للجولف، حيث نقدم لك ثلاثة ملاعب عالمية بما فيها ملعب "سي
                     فيو" الشهير، مع باقات متنوعة وخدمات متكاملة من الإقامة الفاخرة والتدريب المتخصص لتجربة لا تُنسى
                 </p>
-                <a href="#booking" class="btn btn-primary">
+                <a href="#packages" class="btn btn-primary" data-translate="book-now">
                     <i class="fas fa-calendar-alt"></i>
                     احجز الآن
                 </a>
@@ -101,38 +108,11 @@
                 <img src="./assets/images/hero-image.png" alt="منتجع هول إن ون للجولف" loading="lazy">
             </div>
         </header>
-
-        <!-- Partners Section -->
-        <section class="logotypes">
-            <div class="container">
-                <div class="swiper logos-swiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide logo-item">
-                            <img src="./assets/images/company-logo-1.png" alt="Partner Logo 1" loading="lazy">
-                        </div>
-                        <div class="swiper-slide logo-item">
-                            <img src="./assets/images/company-logo-2.png" alt="Partner Logo 2" loading="lazy">
-                        </div>
-                        <div class="swiper-slide logo-item">
-                            <img src="./assets/images/company-logo-3.png" alt="Partner Logo 3" loading="lazy">
-                        </div>
-                        <div class="swiper-slide logo-item">
-                            <img src="./assets/images/company-logo-4.png" alt="Partner Logo 4" loading="lazy">
-                        </div>
-                        <div class="swiper-slide logo-item">
-                            <img src="./assets/images/company-logo-5.png" alt="Partner Logo 5" loading="lazy">
-                        </div>
-                        <div class="swiper-slide logo-item">
-                            <img src="./assets/images/company-logo-6.png" alt="Partner Logo 6" loading="lazy">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
     </div>
 
     <!-- About Section -->
     <section id="about" class="about-section">
+        <div id="about-particles" class="particles-container"></div>
         <!-- Decorative Elements -->
         <div class="shapes-container">
             <div class="shape shape-1"></div>
@@ -143,31 +123,31 @@
 
         <div class="container">
             <div class="about-content">
-                <div class="section-header">
-                    <h2>من نحن</h2>
+                <div class="section-header" data-aos="fade-up">
+                    <h2 data-translate="about-title">من نحن</h2>
                 </div>
-                <p class="about-description">
+                <p class="about-description" data-aos="fade-up" data-aos-delay="100" data-translate="about-description">
                     نحن في منتجع هول إن ون نفخر بتقديم تجربة جولف استثنائية منذ عام 1995. يمتد تاريخنا العريق لأكثر
                     من 25 عاماً من التميز في عالم الجولف.
                 </p>
 
                 <!-- Feature Cards -->
                 <div class="features-grid">
-                    <div class="feature-card" data-tilt>
+                    <div class="feature-card" data-aos="fade-up" data-aos-delay="200" data-tilt>
                         <div class="feature-icon">
                             <i class="fas fa-golf-ball"></i>
                         </div>
                         <h4>3 ملاعب عالمية</h4>
                     </div>
 
-                    <div class="feature-card" data-tilt>
+                    <div class="feature-card" data-aos="fade-up" data-aos-delay="300" data-tilt>
                         <div class="feature-icon">
                             <i class="fas fa-trophy"></i>
                         </div>
                         <h4>25+ عام خبرة</h4>
                     </div>
 
-                    <div class="feature-card" data-tilt>
+                    <div class="feature-card" data-aos="fade-up" data-aos-delay="400" data-tilt>
                         <div class="feature-icon">
                             <i class="fas fa-users"></i>
                         </div>
@@ -178,8 +158,406 @@
         </div>
     </section>
 
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <div id="services-particles" class="particles-container">
+            <!-- Background Decorations -->
+            <div class="gradient-mesh"></div>
+            <div class="glow-line" style="--rotation: 25deg;"></div>
+            <div class="glow-line" style="--rotation: -15deg;"></div>
+            <div class="glow-line" style="--rotation: 10deg;"></div>
+
+            <!-- Particles -->
+            <div class="particle" style="--moveX: 100px; --moveY: -200px; top: 20%; left: 30%;"></div>
+            <div class="particle" style="--moveX: -150px; --moveY: -150px; top: 40%; left: 60%;"></div>
+            <div class="particle" style="--moveX: 200px; --moveY: 100px; top: 70%; left: 20%;"></div>
+        </div>
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-badge">خدماتنا المميزة</span>
+                <h2>المرافق والخدمات</h2>
+                <p class="subtitle">نقدم باقة متكاملة من المرافق والخدمات العالمية لضمان تجربة جولف استثنائية</p>
+            </div>
+
+            <div class="services-grid">
+                <!-- Golf Courses -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200" data-tilt>
+                    <div class="card-content">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-golf-ball"></i>
+                        </div>
+                        <h3>ملاعب الجولف</h3>
+                        <ul class="features-list">
+                            <li>ثلاثة ملاعب بمعايير عالمية</li>
+                            <li>ملعب "سي فيو" الشهير</li>
+                            <li>مناظر طبيعية خلابة</li>
+                        </ul>
+                        <div class="button-group">
+                            <a href="https://wa.me/201234567890?text=استفسار عن ملاعب الجولف"
+                                class="cta-button whatsapp" target="_blank">
+                                <i class="fab fa-whatsapp"></i>
+                                احجز موعداً
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Training Academy -->
+                <div class="service-card featured" data-aos="fade-up" data-aos-delay="300" data-tilt>
+                    <div class="card-content">
+                        <div class="featured-badge">الأكثر طلباً</div>
+                        <div class="icon-wrapper">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3>أكاديمية التدريب</h3>
+                        <ul class="features-list">
+                            <li>مدربون معتمدون دولياً</li>
+                            <li>تقنيات تدريب متقدمة</li>
+                            <li>برامج تدريب مخصصة</li>
+                        </ul>
+                        <div class="button-group">
+                            <a href="https://wa.me/201234567890?text=استفسار عن برامج التدريب"
+                                class="cta-button whatsapp" target="_blank">
+                                <i class="fab fa-whatsapp"></i>
+                                احجز تدريباً
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Luxury Accommodation -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="400" data-tilt>
+                    <div class="card-content">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-hotel"></i>
+                        </div>
+                        <h3>الإقامة الفاخرة</h3>
+                        <ul class="features-list">
+                            <li>غرف وأجنحة فاخرة</li>
+                            <li>إطلالات على الملاعب</li>
+                            <li>خدمات فندقية 5 نجوم</li>
+                        </ul>
+                        <div class="button-group">
+                            <a href="https://wa.me/201234567890?text=استفسار عن الإقامة" class="cta-button whatsapp"
+                                target="_blank">
+                                <i class="fab fa-whatsapp"></i>
+                                احجز إقامة
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pro Shop -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="500" data-tilt>
+                    <div class="card-content">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-store"></i>
+                        </div>
+                        <h3>متجر المحترفين</h3>
+                        <ul class="features-list">
+                            <li>معدات جولف احترافية</li>
+                            <li>ملابس وإكسسوارات</li>
+                            <li>خدمة المساعدة الشخصية</li>
+                        </ul>
+                        <div class="button-group">
+                            <a href="https://wa.me/201234567890?text=استفسار عن متجر المحترفين"
+                                class="cta-button whatsapp" target="_blank">
+                                <i class="fab fa-whatsapp"></i>
+                                استفسر الآن
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Packages Section -->
+    <section id="packages" class="packages-section">
+        <div id="packages-particles" class="particles-container">
+            <!-- Background Decorations -->
+            <div class="gradient-mesh"></div>
+            <div class="glow-path" style="top: 20%;"></div>
+            <div class="glow-path" style="top: 50%;"></div>
+            <div class="glow-path" style="top: 80%;"></div>
+
+            <!-- Particles -->
+            <div class="particle" style="--moveX: -120px; --moveY: 180px; top: 30%; left: 70%;"></div>
+            <div class="particle" style="--moveX: 180px; --moveY: -120px; top: 60%; left: 40%;"></div>
+        </div>
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-badge">باقاتنا المميزة</span>
+                <h2>الحزم المتخصصة</h2>
+                <p class="subtitle">اختر الحزمة المثالية لتجربة جولف لا تُنسى</p>
+            </div>
+
+            <div class="packages-grid">
+                <!-- Standard Package -->
+                <div class="package-card" data-aos="fade-up" data-aos-delay="200" data-tilt>
+                    <div class="package-header">
+                        <h3>الحزمة الأساسية</h3>
+                        <div class="package-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <ul class="package-features">
+                        <li>خمس جولات</li>
+                        <li>إقامة كاملة لمدة خمس ليالٍ في جناح فاخر</li>
+                        <li>خمس جولات - 18 حفرة</li>
+                        <li>جولة واحدة مضمونة في ملعب "سي فيو" الشهير</li>
+                        <li>جلسة تدريب رقمية مجانية</li>
+                    </ul>
+                    <a href="https://wa.me/201234567890?text=استفسار عن الحزمة الأساسية" class="package-cta"
+                        target="_blank">
+                        احجز الآن
+                        <i class="fas fa-arrow-left"></i>
+                    </a>
+                </div>
+
+                <!-- Triple Tee Package -->
+                <div class="package-card featured" data-aos="fade-up" data-aos-delay="300" data-tilt>
+                    <div class="featured-tag">الأكثر طلباً</div>
+                    <div class="package-header">
+                        <h3>الجولة الثلاثية</h3>
+                        <div class="package-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                    </div>
+                    <ul class="package-features">
+                        <li>إقامة لمدة ليلتين في غرفة مزدوجة مع وجبة الإفطار</li>
+                        <li>ثلاث جولات - 18 حفرة</li>
+                        <li>جولة واحدة في ملعب "سي فيو" الشهير</li>
+                        <li>تأجير مجاني للعربات</li>
+                        <li>خصم 20% لمتجر المحترفين</li>
+                    </ul>
+                    <a href="https://wa.me/201234567890?text=استفسار عن الجولة الثلاثية" class="package-cta"
+                        target="_blank">
+                        احجز الآن
+                        <i class="fas fa-arrow-left"></i>
+                    </a>
+                </div>
+
+                <!-- Relaxation Package -->
+                <div class="package-card" data-aos="fade-up" data-aos-delay="400" data-tilt>
+                    <div class="package-header">
+                        <h3>استراحة استجمام</h3>
+                        <div class="package-icon">
+                            <i class="fas fa-spa"></i>
+                        </div>
+                    </div>
+                    <ul class="package-features">
+                        <li>إقامة لليلة واحدة مع وجبة إفطار كاملة</li>
+                        <li>تناول العشاء في أي من مطاعم المنتجع</li>
+                        <li>الوصول إلى الملاعب (تطبق الرسوم ويستبعد ملعب "سي فيو")</li>
+                        <li>تأجير نادي مجاني</li>
+                    </ul>
+                    <a href="https://wa.me/201234567890?text=استفسار عن باقة الاستجمام" class="package-cta"
+                        target="_blank">
+                        احجز الآن
+                        <i class="fas fa-arrow-left"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="packages-note" data-aos="fade-up" data-aos-delay="500">
+                <i class="fas fa-info-circle"></i>
+                <p>تتوفر حزم مخصصة للفعاليات المؤسسية والإقامات الطويلة. يجب على العملاء الاتصال بالشركة لترتيب أي حزم
+                    مخصصة.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div id="contact-particles" class="particles-container"></div>
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-badge">تواصل معنا</span>
+                <h2>دعنا نناقش احتياجاتك</h2>
+                <p class="subtitle">نحن هنا للإجابة على استفساراتك وتقديم أفضل الحلول لك</p>
+            </div>
+
+            <div class="contact-container">
+                <!-- Contact Form -->
+                <div class="contact-form-wrapper" data-aos="fade-up" data-aos-delay="200">
+                    <div class="form-tabs">
+                        <button class="tab-btn active" data-tab="email">
+                            <i class="fas fa-envelope"></i>
+                            راسلنا عبر البريد
+                        </button>
+                        <button class="tab-btn" data-tab="whatsapp">
+                            <i class="fab fa-whatsapp"></i>
+                            تواصل عبر واتساب
+                        </button>
+                    </div>
+
+                    <form id="contactForm" class="contact-form" data-aos="fade-up" data-aos-delay="300">
+                        <div class="form-group">
+                            <label for="name">الاسم</label>
+                            <div class="input-wrapper">
+                                <i class="fas fa-user"></i>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">البريد الإلكتروني</label>
+                            <div class="input-wrapper">
+                                <i class="fas fa-envelope"></i>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">الرسالة</label>
+                            <div class="input-wrapper">
+                                <i class="fas fa-message"></i>
+                                <textarea id="message" name="message" required></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="submit-btn email-btn">
+                                <span class="btn-text">إرسال عبر البريد</span>
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+
+                            <a href="#" class="submit-btn whatsapp-btn" style="display: none;">
+                                <span class="btn-text">تواصل عبر واتساب</span>
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Contact Decoration -->
+                <div class="contact-decoration" data-aos="fade-up" data-aos-delay="400">
+                    <div class="decoration-content">
+                        <div class="star-shape">
+                            <div class="star-inner"></div>
+                        </div>
+                        <div class="decoration-lines">
+                            <div class="line"></div>
+                            <div class="line"></div>
+                            <div class="line"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
-    <footer class="footer"></footer>
+    <footer class="footer">
+        <div class="footer-content">
+            <!-- Main Footer -->
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <a href="#" class="footer-logo">
+                        <i class="fas fa-golf-ball"></i>
+                        <span data-translate="logo-text">هول إن ون</span>
+                    </a>
+                    <p class="footer-description" data-translate="footer-description">
+                        منتجع جولف عالمي يقدم تجربة فريدة مع ثلاثة ملاعب احترافية وخدمات متكاملة
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <div class="footer-section" data-aos="fade-up" data-aos-delay="100">
+                        <h3>روابط سريعة</h3>
+                        <ul>
+                            <li><a href="#about">من نحن</a></li>
+                            <li><a href="#services">خدماتنا</a></li>
+                            <li><a href="#packages">الحزم المتخصصة</a></li>
+                            <li><a href="#contact">تواصل معنا</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-section" data-aos="fade-up" data-aos-delay="100">
+                        <h3>الخدمات</h3>
+                        <ul>
+                            <li><a href="#">ملاعب الجولف</a></li>
+                            <li><a href="#">التدريب المتخصص</a></li>
+                            <li><a href="#">الإقامة الفاخرة</a></li>
+                            <li><a href="#">المطاعم والمقاهي</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-section" data-aos="fade-up" data-aos-delay="100">
+                        <h3>تواصل معنا</h3>
+                        <ul class="contact-info">
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>البرتغال - منطقة الجولف السياحية</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-phone"></i>
+                                <span>+351 123 456 789</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <span>info@holeinone.com</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-section" data-aos="fade-up" data-aos-delay="100">
+                        <h3>النشرة البريدية</h3>
+                        <p>اشترك للحصول على آخر العروض والأخبار</p>
+                        <form class="newsletter-form">
+                            <div class="input-group">
+                                <input type="email" placeholder="البريد الإلكتروني" required>
+                                <button type="submit" class="btn-subscribe">
+                                    <i class="fas fa-paper-plane"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <div class="copyright">
+                        © 2025 هول إن ون. جميع الحقوق محفوظة
+                    </div>
+
+                    <div class="footer-controls">
+                        <!-- Theme Switcher -->
+                        <button class="theme-toggle" aria-label="تغيير المظهر">
+                            <div class="toggle-icons">
+                                <i class="fas fa-sun"></i>
+                                <i class="fas fa-moon"></i>
+                            </div>
+                            <div class="toggle-circle"></div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Go To Top Button -->
+    <button class="go-top-btn" aria-label="العودة إلى الأعلى">
+        <i class="fas fa-chevron-up"></i>
+        <div class="go-top-text">أعلى الصفحة</div>
+    </button>
 
     <!-- 
     ================================================== 
@@ -189,15 +567,22 @@
     <!-- Core Libraries -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
     <!-- Smooth Scroll Library -->
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
 
-    <!-- Additional Libraries -->
+    <!-- Animation & UI Libraries -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+    <!-- Additional Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/i18next/21.6.10/i18next.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <!-- Custom JavaScript -->
     <script src="./assets/js/main.js"></script>
