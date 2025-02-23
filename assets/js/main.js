@@ -471,6 +471,29 @@ const ImageManager = {
     }
 };
 
+const loadLibraries = () => {
+    if ('IntersectionObserver' in window) {
+        const librariesToLoad = [
+            'https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js',
+            'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js',
+        ];
+
+        const observer = new IntersectionObserver((entries) => {
+            if (entries[0].isIntersecting) {
+                librariesToLoad.forEach(lib => {
+                    const script = document.createElement('script');
+                    script.src = lib;
+                    script.defer = true;
+                    document.body.appendChild(script);
+                });
+                observer.disconnect();
+            }
+        });
+
+        observer.observe(document.querySelector('footer'));
+    }
+};
+
 /**
  * Initialize everything when DOM is loaded
  */
@@ -492,4 +515,6 @@ document.addEventListener('DOMContentLoaded', () => {
             disable: 'mobile' // Disable animations on mobile
         });
     }
+
+    loadLibraries();
 });

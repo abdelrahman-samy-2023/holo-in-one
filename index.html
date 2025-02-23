@@ -51,6 +51,18 @@
 
     <!-- Add in head section -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.0/color-thief.umd.js"></script>
+
+    <!-- إضافة preconnect للمصادر المهمة -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- تحميل المكتبات الأساسية فقط -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+
+    <!-- تحميل المكتبات غير الضرورية بشكل متأخر -->
+    <script src="./assets/js/load-libraries.js" defer></script>
 </head>
 
 <body class="font-arabic bg-gray-100 text-gray-800" data-scroll-container data-theme="dark">
@@ -105,7 +117,8 @@
                 </a>
             </div>
             <div class="header-image">
-                <img loading="lazy" data-src="./assets/images/hero-image.png" alt="منتجع هول إن ون للجولف" class="lazy">
+                <img loading="lazy" data-src="./assets/images/hero-image.png" width="800" height="600"
+                    alt="منتجع هول إن ون للجولف" class="lazy">
             </div>
         </header>
     </div>
